@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
+    <data noupdate="1">
         <record model="library.book" id="erp_101">
             <field name="name">ERP 101</field>
             <field name="description">Learn Odoo ERP System</field>
@@ -9,7 +9,6 @@
         <record model="library.book" id="accounting_201">
             <field name="name">Accounting 201</field>
             <field name="description">
-            Accounting 201:
             Intermediate Accounting Course
             Learning about Cost Accounting and Pricing And Revenue Analysis.    
             </field>    
