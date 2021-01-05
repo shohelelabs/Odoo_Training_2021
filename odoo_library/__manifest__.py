@@ -13,11 +13,12 @@
     'category': 'Training',
     'version':'0.1',
     'depends':['base'],
+    
     'data':[
         
     ],
     
     'demo': [
-        'demo/library_demo'
+        'demo/library_demo.xml'
     ],
 }
