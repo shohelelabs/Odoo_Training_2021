@@ -2,7 +2,7 @@
 
 from odoo import models, fields, api
 
-class Course(models.Model):
+class Book(models.Model):
     
     _name = 'library.book'
     _description = 'Book Info'
@@ -10,7 +10,7 @@ class Course(models.Model):
     name = fields.Char(string='Title', required=True)
     description = fields.Text(string='Description')
     
-    level = fields.Selection(string='level',
+    level = fields.Selection(string='Level',
                             selection=[('beginner','Beginner'),
                                        ('intermediate','Intermediate'),
                                        ('advanced','Advanced'),

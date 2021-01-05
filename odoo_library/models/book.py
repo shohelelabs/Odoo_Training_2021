@@ -2,7 +2,7 @@
 
 from odoo import models, fields, api
 
-class Course(models.Model):
+class Book(models.Model):
     
     _name = 'library.book'
     _description = 'Book Info'
