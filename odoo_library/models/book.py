@@ -13,6 +13,6 @@ class Book(models.Model):
     level = fields.Selection(string='Level',
                             selection=[('beginner','Beginner'),
                                        ('intermediate','Intermediate'),
-                                       ('advanced','Advanced'),
+                                       ('advanced','Advanced')
                                        ],copy=False)
     active = fields.Boolean(string='Active',default=True) 
