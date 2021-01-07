@@ -17,6 +17,8 @@
     'depends':['base'],
     
     'data':[
+        'security/library_security.xml',
+        'security/ir.model.access.csv',
         'views/book_views.xml',
         'views/library_menuitems.xml',
     ],
