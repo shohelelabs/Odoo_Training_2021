@@ -10,8 +10,10 @@
     """,
     'author':'Elabs',
     'website':'https://www.elabs.de',
+    
     'category': 'Learning and Training',
     'version':'0.1',
+    
     'depends':['base'],
     
     'data':[
@@ -20,6 +22,6 @@
     ],
     
     'demo': [
-        'demo/library_demo.xml'
+        'demo/library_demo.xml',
     ],
 }
