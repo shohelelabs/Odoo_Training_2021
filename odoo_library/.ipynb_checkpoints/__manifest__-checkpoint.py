@@ -1,4 +1,5 @@
 #-*- coding: utf-8 -*-
+#'demo/library_demo.xml',
 {
     'name': 'Odoo Library',
     'Summary':"""Library app to manage organizational books""",
@@ -24,6 +25,6 @@
     ],
     
     'demo': [
-        'demo/library_demo.xml',
+        
     ],
 }
