@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
-from odoo.exceptions import UserError,ValidationError
+from odoo.exceptions import UserError, ValidationError
 
 class Book(models.Model):
     
@@ -21,7 +21,7 @@ class Book(models.Model):
     
     base_price = fields.Float(string='Base Price', default=0.00)
     
-    additional_fee = fields.Float(string='Additional Fee', default=0.00)
+    additional_fee = fields.Float(string='Additional Fee', default=10.00)
     
     total_price = fields.Float(string='Total Price', readonly=True)
     
