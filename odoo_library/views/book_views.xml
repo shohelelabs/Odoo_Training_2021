@@ -22,7 +22,10 @@
                         <notebook>
                             <page string="Description">
                                 <field name="description"/>
-                            </page>    
+                            </page>  
+                            <page string="Reservations">
+                                <field name="reservation_ids"/>
+                            </page> 
                         </notebook>    
                     </sheet>    
                 </form>    

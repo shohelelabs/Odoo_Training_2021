@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="reservation_view_form">
+            <field name="name">library.reservation.form</field>
+            <field name="model">library.reservation</field>
+            <field name="arch" type="xml">
+                <form string="Reservation Form">
+                    <sheet>
+                        <h1><field name="name"/></h1>
+                        <group>
+                            <group>
+                                <field name="book_id"/> 
+                            </group>
+                            <group>
+                                <field name="reservation_operator_id"/> 
+                            </group>
+                            <notebook>
+                                <page string="Members">
+                                    <field name="member_ids"/>
+                                </page>    
+                            </notebook>  
+                        </group>
+                          
+                    </sheet>    
+                </form>    
+            </field>
+        </record>
+        <record model="ir.ui.view" id="reservation_view_list">
+            <field name="name">library.reservation.list</field>
+            <field name="model">library.reservation</field>
+            <field name="arch" type="xml">
+                <tree string="Reservation List">
+                    <field name="name"/>
+                    <field name="reservation_operator_id"/>
+                </tree>
+            </field>                    
+        </record>
+    </data>
+</odoo>

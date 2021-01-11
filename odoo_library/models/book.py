@@ -25,6 +25,8 @@ class Book(models.Model):
     
     total_price = fields.Float(string='Total Price', readonly=True)
     
+    reservation_ids = fields.One2many(comodel_name='library.reservation',inverse_name='book_id',string='Reservations')
+    
     @api.onchange('base_price','additional_fee')
     def _onchange_total_price(self):
         if self.base_price < 0.00:

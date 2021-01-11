@@ -22,6 +22,7 @@
         'security/ir.model.access.csv',
         'views/book_views.xml',
         'views/library_menuitems.xml',
+        'views/reservation_views.xml',
     ],
     
     'demo': [
