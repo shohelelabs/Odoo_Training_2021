@@ -49,10 +49,12 @@
             <field name="name">library.reservation.calender</field>
             <field name="model">library.reservation</field>
             <field name="arch" type="xml">
-                <tree string="Reservation List">
-                    <field name="name"/>
-                    <field name="reservation_operator_id"/>
-                </tree>
+                <calender string="Reservation Calender"
+                          date_start="start_date"
+                          date_stop="end_date" 
+                          mode="month"> 
+                    <field name="name"/> 
+                </calender>
             </field>                    
         </record>
  
