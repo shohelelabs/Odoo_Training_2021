@@ -14,11 +14,13 @@ class Reservation(models.Model):
     reservation_operator_id = fields.Many2one(comodel_name='res.partner',string='Reservation Operator')
     member_ids = fields.Many2many(comodel_name='res.partner',string='Reservation Member')
     
+    
     start_date = fields.Date(string='Start Date', default=fields.Date.today)
     
     duration = fields.Integer(string='Reservation Days', default=1)
     
     end_date = fields.Date(string='End Date',compute='_compute_end_date',inverse='_inverse_end_date',store=True)
+    
     
     @api.depends('start_date','duration')
     def _compute_end_date(self):
