@@ -54,6 +54,7 @@
                           date_stop="end_date" 
                           mode="month"> 
                     <field name="name"/> 
+                    <field name="reservation_operator_id"/>
                 </calender>
             </field>                    
         </record>
