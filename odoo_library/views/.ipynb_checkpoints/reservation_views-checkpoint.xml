@@ -45,11 +45,11 @@
         </record>
         
         
-         <record model="ir.ui.view" id="reservation_view_calender">
-            <field name="name">library.reservation.calender</field>
+         <record model="ir.ui.view" id="reservation_view_calendar">
+            <field name="name">library.reservation.calendar</field>
             <field name="model">library.reservation</field>
             <field name="arch" type="xml">
-                <calender string="Reservation Calender"
+                <calender string="Reservation Calendar"
                           date_start="start_date"
                           date_stop="end_date" 
                           mode="month"> 

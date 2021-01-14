@@ -14,7 +14,7 @@
         <record model="ir.actions.act_window" id="reservation_list_action">
             <field name="name">Reservationss</field>
             <field name="res_model">library.reservation</field>
-            <field name="view_mode">tree,form,calender</field>
+            <field name="view_mode">tree,form,calendar</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Create the first reservation info
