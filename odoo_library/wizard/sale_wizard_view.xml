@@ -2,7 +2,29 @@
 <odoo>
     <data>
         <record model="ir.ui.view" id="library_sale_wizard_form_view">
-            <field name="name">library.sale.wizard.form</field> 
+            <field name="name">library.sale.wizard.form</field>  
+            <field name="model">library.sale.wizard</field>
+            <field name="arc" type="xml">
+                <form string="Create Sale order for reservation">
+                   <group>
+                        <field name="reservation_id"/>
+                        <field name="reservation_member_ids" invisible="1"/>
+                        <field name="member_ids" domain="[('id' , 'in , reservation_member_ids')]"/>
+                    </group>
+                    <footer>
+                        <button name="create_sale_orders" type="object" string="Create" class="oe_highlight"/>
+                        or
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
         </record> 
+        <act_window id="launch_sale_wizard"
+                    name="Create Sale Order"
+                    binding_model="library.reservation"
+                    res_model="library.sale.wizard"
+                    view_mode="form"
+                    target="new"/>
+
     </data>
 </odoo>

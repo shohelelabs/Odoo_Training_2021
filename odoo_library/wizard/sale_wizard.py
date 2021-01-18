@@ -19,6 +19,8 @@ class SaleWizard(models.TransientModel):
                                              string='Members in current reservation',
                                              related='reservation_id.member_ids',
                                              help='These are the members currently reserve books')
+    member_ids=fields.Many2many(comodel_name='res.partner',
+                               string='Members for Sales Order')
     
     def create_sale_orders(self):
         reservation_product_id=self.env['product.product'].search([('is_reservation_product','=' , True)], limit=1)
