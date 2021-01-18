@@ -9,7 +9,7 @@
                    <group>
                         <field name="reservation_id"/>
                         <field name="reservation_member_ids" invisible="1"/>
-                        <field name="member_ids" domain="[('id' , 'in , reservation_member_ids')]"/>
+                        <field name="member_ids" domain="[('id' , 'in' , reservation_member_ids)]"/>
                     </group>
                     <footer>
                         <button name="create_sale_orders" type="object" string="Create" class="oe_highlight"/>
