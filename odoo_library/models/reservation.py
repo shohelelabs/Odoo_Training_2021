@@ -25,7 +25,7 @@ class Reservation(models.Model):
     
     
     total_price = fields.Float(string='Total Price',
-                              related='book_id',total_price)
+                              related='book_id.total_price')
     
     
     @api.depends('start_date','duration')
