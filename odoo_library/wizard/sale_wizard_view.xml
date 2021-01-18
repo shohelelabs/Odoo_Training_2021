@@ -5,11 +5,6 @@
         <record model="ir.ui.view" id="library_sale_wizard_form_view">
             <field name="name">library.sale.wizard.form</field>
             <field name="model">library.sale.wizard</field>
-            <field name="arc" type="xml">
-                <form string="Create Sale order for reservation">
-                   
-                </form>
-            </field>
         </record>
         
         <act_window id="launch_sale_wizard"
