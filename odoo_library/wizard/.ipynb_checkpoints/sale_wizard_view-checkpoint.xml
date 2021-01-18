@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <odoo>
     <data>
         <record model="ir.ui.view" id="library_sale_wizard_form_view">
             <field name="name">library.sale.wizard.form</field>
             <field name="model">library.sale.wizard</field>
-        </record>
-        
-        <act_window id="launch_sale_wizard"
-                    name="Create Sale Order"
-                    binding_model="library.reservation"
-                    res_model="library.sale.wizard"
-                    view_mode="form"
-                    target="new"/>
-        
+        </record> 
     </data>
 </odoo>
