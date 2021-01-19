@@ -1,6 +1,10 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+
 book_admin,book admin,model_library_book,group_library_admin,1,1,1,1
 book_read_all,book read all,model_library_book,,1,0,0,0
+
 reservation_admin,reservation admin,model_library_reservation,group_library_admin,1,1,1,1
 reservation_read_all,reservation read all,model_library_reservation,,1,0,0,0
-access_library_sale_wizard,access_library_sale_wizard,model_library_sale_wizard,base.group_user,1,0,0,0
+
+sale_wizard_admin,sale wizard admin,model_library_reservation_sale_wizard,group_library_admin,1,1,1,1
+sale_wizard_read_all,sale wizard read all,model_library_sale_wizard,,1,0,0,0 
