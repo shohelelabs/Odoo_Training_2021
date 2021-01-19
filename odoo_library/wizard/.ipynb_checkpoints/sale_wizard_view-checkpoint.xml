@@ -19,12 +19,6 @@
                 </form>
             </field>
         </record>   
-        <record model="ir.actions.act_window" id="launch_sale_wizard">
-            <field name="name">Create Sale Order</field>
-            <field name="res_model">library.sale.wizard</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">form</field>
-            <field name="target">new</field>
-        </record>
+        <act_window id="launch_sale_wizard" name="Create Sale Order" binding_model="library.reservation" res_model="library.sale.wizard" view_mode="form" target="new"/>
     </data>
 </odoo>
