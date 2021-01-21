@@ -28,7 +28,7 @@ class SaleWizard(models.TransientModel):
             for member in self.member_ids:
                 order_id=self.env['sale.order'].create({
                     'partner_id':member_id,
-                    'reservation_id':self.session.id,
+                    'reservation_id':self.reservation.id,
                     'order_line':[(0,0, {'product_id': reservation_product_id.id,'price_unit': self.reservation_id.total_price})]
                 })
         
