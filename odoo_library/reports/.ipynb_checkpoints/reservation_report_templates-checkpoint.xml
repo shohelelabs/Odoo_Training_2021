@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <report id="report_reservation" 
-            model="library.reservation" 
-            string="Reservation Report" 
-            name="odoo_library.report_reservation_document"
-            file="odoo_library.report_reservation"
-            report_type="qweb-html"/>
-    
+<odoo> 
+    <record id="report_reservation" model="ir.actions.report">
+        <field name="name">Reservation Report</field>
+        <field name="model">library.reservation</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_file">odoo_library_report_reservation</field>
+        <field name="report_name">odoo_library.report_reservation_document</field> 
+        <field name="binding_model_id" ref="model_library_reservation"/>
+        <field name="binding_type">report</field>
+    </record> 
     <template id="report_reservation_document">
         <t t-cell="web.html_container">
             <t t-foreach="docs" t-as="doc">
