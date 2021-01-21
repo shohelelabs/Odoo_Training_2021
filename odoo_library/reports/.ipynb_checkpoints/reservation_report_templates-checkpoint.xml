@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report id="report_reservation" 
+            model="library.reservation" 
+            string="Reservation Report" 
+            name="odoo_library.report_reservation_document"
+            file="odoo_library.report_reservation"
+            report_type="qweb-html"/>
+    
+    <template id="report_reservation_document">
+        <t t-cell="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-cell="web.external_layout">
+                    <div class="page">
+                        <h2 t-field="doc.name" class="mt16"/>
+                        <div class="row mt32 mb32" id="reservation_info">
+                            <div class="col-auto mw-100 mb-2">
+                                <strong> Reservation Duration:</strong>
+                                <t t-if="doc.start_date">
+                                    <span t-field="doc.start_date"/>
+                                </t>
+                                to
+                                <t t-if="doc.end_date">
+                                    <span t-field="doc.end_date"/>
+                                </t>
+                            </div>
+                            <div t-if="doc.reservation_operator_id" class="col-auto mw-100 mb-2">
+                                <strong>Operator:</strong>
+                                <span t-field="doc.reservation_operator_id.name"/>
+                            </div>
+                        </div>
+                        <h4>Members</h4>
+                        <table class="table table-sm o_main_table">
+                            <thead>
+                                <tr>
+                                    <th name="th_name">Name</th>
+                                    <th name="th_phone">phone</th>
+                                    <th name="th_email">Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="doc.member_ids" t-as="member">
+                                    <tr>
+                                        <td t-if="member.name" name="td_name">
+                                            <span t-field="member.name"/>
+                                        </td>
+                                        <td t-if="member.phone" name="td_phone">
+                                            <span t-field="member.phone"/>
+                                        </td>
+                                        <td t-if="member.email" name="td_email">
+                                            <span t-field="member.email"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
