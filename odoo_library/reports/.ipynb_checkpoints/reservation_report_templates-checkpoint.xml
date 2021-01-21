@@ -10,9 +10,9 @@
         <field name="binding_type">report</field>
     </record>  
     <template id="report_reservation_document">
-        <t t-cell="web.html_container">
+        <t t-call="web.html_container">
             <t t-foreach="docs" t-as="doc">
-                <t t-cell="web.external_layout">
+                <t t-call="web.external_layout">
                     <div class="page">
                         <h2 t-field="doc.name" class="mt16"/>
                         <div class="row mt32 mb32" id="reservation_info">
