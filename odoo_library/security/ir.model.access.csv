@@ -5,5 +5,5 @@ reservation_admin,reservation admin,model_library_reservation,group_library_admi
 reservation_read_all,reservation read all,model_library_reservation,,1,0,0,0
 sale_wizard_admin,sale_wizard admin,model_library_sale_wizard,group_library_admin,1,1,1,1
 sale_wizard_read_all,sale_wizard read all,model_library_sale_wizard,,1,0,0,0
-reservation_report_admin,reservation_report admin,library_reservation_report,group_library_admin,1,1,1,1
-reservation_report_read_all,reservation_report read all,library_reservation_report,,1,0,0,0
+reservation_report_admin,reservation_report admin,report_reservation,group_library_admin,1,1,1,1
+reservation_report_read_all,reservation_report read all,report_reservation,,1,0,0,0
