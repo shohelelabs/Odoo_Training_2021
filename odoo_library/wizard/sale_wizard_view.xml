@@ -19,12 +19,13 @@
                 </form>
             </field>
         </record>     
+        <act_window id="launch_sale_wizard" name="Create Sale Order" binding_model="library.reservation" res_model="library.sale.wizard" view_mode="form" target="new"/>
         <record model="ir.actions.act_window" id="launch_sale_wizard">
             <field name="name">Create Sale Order</field>
             <field name="res_model">library.sale.wizard</field>
             <field name="view_mode">form</field>
             <field name="target">new</field>
-            <field name="binding_model_id" ref="model_library_reservation"/>     
+            <field name="binding_model_id" ref="library_reservation"/>     
         </record>
     </data>
 </odoo>
