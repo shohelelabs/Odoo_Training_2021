@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="book_website">
+            <t t-call="website.layout">
+                <t set="title">Library</t>
+                <div class="oe_structure">
+                    <div class="container">
+                        <h1>Books</h1>
+                        <t t-foreach="books" t-as="book">
+                            <h3>
+                                <t t-esc="book.id"/>
+                                <t t-esc="book.name"/>
+                            </h3>
+                            <p>Description:
+                                <span t-field="book.description"/>
+                            </p>
+                            <p>Level:
+                                <span t-field="book.level"/>
+                            </p>
+                            <strong>Reservation</strong>
+                            <t t-foreach="book.reservation_ids" t-as="reservation">
+                                <p>
+                                    <a t-attf-herf="/library/{{slug(reservation)}}">
+                                        <t t-esc="reservation.name"/>
+                                    </a>
+                                </p>
+                                <p>Last modified:
+                                    <i t-field="reservation.write_data" t-field-options='{"format": "long"}'/>
+                                </p>
+                            </t>
+                            <t t-if="not book.reservation_ids">
+                                <p>Currently No Reservation</p>
+                            </t>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </template>
+        <template id="reservation_website">
+            <t t-call="website.layout">
+                <t t-set="title">Reservation</t>
+                <div class="oe_structure">
+                    <div class="container">
+                        <h3 t-field="reservation.name">
+                            <p>Last Modified:
+                                <i t-field="rservation.write_date" t-field-options='{"format": "long"}'/>
+                                
+                            </p>
+                            <p>Book:
+                                <t t-esc="reservation.book_id.name"/>
+                            </p>
+                            <h3>Members:</h3>
+                            <ul>
+                                <t t-foreach="reservation.member_ids" t-as="member">
+                                    <li>
+                                        <span t-field="member.name"/>
+                                    </li>
+                                </t>
+                            </ul>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -15,7 +15,7 @@
     'category': 'Learning and Training',
     'version':'0.1',
     
-    'depends':['sale'],
+    'depends':['sale','website'],
     
     'data':[
         'security/library_security.xml',
@@ -27,6 +27,7 @@
         'views/product_views_inherit.xml',
         'wizard/sale_wizard_view.xml',
         'reports/reservation_report_templates.xml',
+        'views/library_web_templates.xml',
     ],
     
     'demo': [
