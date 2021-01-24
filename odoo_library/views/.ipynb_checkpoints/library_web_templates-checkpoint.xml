@@ -42,7 +42,7 @@
                 <t t-set="title">Reservation</t>
                 <div class="oe_structure">
                     <div class="container">
-                        <h3 t-field="reservation.name">
+                        <h3 t-field="reservation.name"/>
                             <p>Last Modified:
                                 <i t-field="rservation.write_date" t-field-options='{"format": "long"}'/>
                                 
