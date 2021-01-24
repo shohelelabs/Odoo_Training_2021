@@ -3,7 +3,7 @@
 from odoo import http
 
 
-class Library(http.controller):
+class Library(http.Controller):
     @http.route('/library/',auth='public',website=True)
     def index(self, **kw):
         return "Hello World"
@@ -15,4 +15,4 @@ class Library(http.controller):
     
     @http.route('/library/<model("library.reservation"):reservation>/',auth='public',website=True)
     def reservation(self,reservation):
-        return http.request.render('odoo_library.reservation_website',{'reservation':reservation})
+        return http.request.render('odoo_library.reservation_website',{'reservation':reservation,})
