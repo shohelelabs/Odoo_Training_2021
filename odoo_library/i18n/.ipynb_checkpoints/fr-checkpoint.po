@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-25 13:56+0000\n"
-"PO-Revision-Date: 2021-01-25 13:56+0000\n"
+"POT-Creation-Date: 2021-01-25 14:24+0000\n"
+"PO-Revision-Date: 2021-01-25 14:24+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -36,6 +36,13 @@ msgid "Active"
 msgstr ""
 
 #. module: odoo_library
+#: code:addons/odoo_library/models/.ipynb_checkpoints/book-checkpoint.py:0
+#: code:addons/odoo_library/models/book.py:0
+#, python-format
+msgid "Addiotional Fees cannot be less than 10.00: %s"
+msgstr ""
+
+#. module: odoo_library
 #: model:ir.model.fields,field_description:odoo_library.field_library_book__additional_fee
 msgid "Additional Fee"
 msgstr ""
@@ -48,7 +55,14 @@ msgstr ""
 #. module: odoo_library
 #: model:ir.model.fields,field_description:odoo_library.field_library_book__base_price
 msgid "Base Price"
-msgstr ""
+msgstr "TEST BASE PRISE(Translated)"
+
+#. module: odoo_library
+#: code:addons/odoo_library/models/.ipynb_checkpoints/book-checkpoint.py:0
+#: code:addons/odoo_library/models/book.py:0
+#, python-format
+msgid "Base Price cannot be set as Negative."
+msgstr "BASE PRICE CAN NOT BE NEGATIVE(Translated)"
 
 #. module: odoo_library
 #: model:ir.model.fields.selection,name:odoo_library.selection__library_book__level__beginner
