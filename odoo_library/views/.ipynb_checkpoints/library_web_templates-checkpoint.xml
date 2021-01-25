@@ -44,7 +44,7 @@
                     <div class="container">
                         <h3 t-field="reservation.name"/>
                         <p>Last Modified:
-                            <i t-field="rservation.write_date" t-field-options='{"format": "long"}'/>        
+                            <i t-field="reservation.write_date" t-field-options='{"format": "long"}'/>        
                         </p>
                         <p>Book:
                             <t t-esc="reservation.book_id.name"/>
