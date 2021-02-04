@@ -15,7 +15,7 @@
     'category': 'Learning and Training',
     'version':'0.1',
     
-    'depends':['sale','website','subscription'],
+    'depends':['sale','website','subscription',],
     
     'data':[
         'security/library_security.xml',
