@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<odoo>
+    <data> 
+        <record model="ir.ui.view" id="sale_subscription_form_view_inherit_library">
+            <field name="name">sale.subscription.form.inherit.library</field>
+            <field name="model">sale.subscription</field>
+            <field name="inherit_id" ref="sale_subscription.sale_subscription_view_form"/>
+            <field name="arch" type="xml">
+                <control>
+                  <create
+                    string="Add New product"
+                  />
+                  <create
+                    string="Add New section"
+                    context="{'default_display_type': 'line_section'}"
+                  />
+                  <create
+                    string="Add New note"
+                    context="{'default_display_type': 'line_note'}"
+                  />
+               </control>
+            </field>
+        </record>
+        
+    </data>
+</odoo>
+

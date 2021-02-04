@@ -21,13 +21,14 @@
                             </group>
                             <notebook>
                                 <page string="Members">
-                                    <field name="member_ids"/>
-                                </page>    
-                            </notebook>  
-                        </group>
-                          
-                    </sheet>    
+                                    <field name="member_ids"/>  
+                                    <button name="confirm" string="Test Button" class="oe_highlight"/>
+                                </page>   
+                            </notebook>      
+                        </group> 
+                    </sheet>     
                 </form>    
+                
             </field>
         </record>
         

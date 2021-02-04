@@ -24,5 +24,27 @@
                 </xpath>
             </field>
         </record>
+        
+        <record model="ir.ui.view" id="sale_order_form_view_inherit_library">
+            <field name="name">sale.order.form.inherit.library</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <control>
+                  <create
+                    string="Add New product"
+                  />
+                  <create
+                    string="Add New section"
+                    context="{'default_display_type': 'line_section'}"
+                  />
+                  <create
+                    string="Add New note"
+                    context="{'default_display_type': 'line_note'}"
+                  />
+               </control>
+            </field>
+        </record>
+        
     </data>
 </odoo>
