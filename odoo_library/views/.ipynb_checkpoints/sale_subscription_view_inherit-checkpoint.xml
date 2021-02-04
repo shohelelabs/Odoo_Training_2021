@@ -6,7 +6,7 @@
             <field name="model">sale.subscription</field>
             <field name="inherit_id" ref="sale_subscription.sale_subscription_view_form"/>
             <field name="arch" type="xml">
-                <tree string="Sales Order Lines" editable="bottom">
+                <tree>
                     <control>
                         <create name="add_product_control" string="Add a product"/>
                         <create name="add_section_control" string="Add a section" context="{'default_display_type': 'line_section'}"/>
