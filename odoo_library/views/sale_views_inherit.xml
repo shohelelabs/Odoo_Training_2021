@@ -33,15 +33,7 @@
                 <control>
                   <create
                     string="Add New product"
-                  />
-                  <create
-                    string="Add New section"
-                    context="{'default_display_type': 'line_section'}"
-                  />
-                  <create
-                    string="Add New note"
-                    context="{'default_display_type': 'line_note'}"
-                  />
+                  /> 
                </control>
             </field>
         </record>
