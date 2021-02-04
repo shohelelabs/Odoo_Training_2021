@@ -6,9 +6,11 @@
             <field name="model">sale.subscription</field>
             <field name="inherit_id" ref="sale_subscription.sale_subscription_view_form"/>
             <field name="arch" type="xml">
-                <tree>
+                <tree string="Sales Order Lines" editable="bottom">
                     <control>
-                      <create string="Add New Line"/> 
+                        <create name="add_product_control" string="Add a product"/>
+                        <create name="add_section_control" string="Add a section" context="{'default_display_type': 'line_section'}"/>
+                        <create name="add_note_control" string="Add a note" context="{'default_display_type': 'line_note'}"/>
                     </control>
                 </tree>
             </field>
