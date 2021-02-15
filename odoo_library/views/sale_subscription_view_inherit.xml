@@ -13,7 +13,7 @@
                         <create name="add_note_control" string="Add a note" context="{'default_display_type': 'line_note'}"/>
                     </control>
                 </tree>
-            </field>
+            </field> 
         </record>
     </data>
 </odoo>
