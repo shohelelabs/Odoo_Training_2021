@@ -40,30 +40,15 @@
             
         </record>
         
-        <record id="view_quotation_tree" model="ir.ui.view">
+        <record id="view_quotation_treeview" model="ir.ui.view">
             <field name="name">sale.order.tree</field>
             <field name="model">sale.order</field>
-            <field name="priority">4</field>
+            <field name="inherit_id" ref="sale.view_quotation_tree_with_onboarding"/>
             <field name="arch" type="xml">
-                <tree string="Quotation" class="o_sale_order" multi_edit="1" sample="1">
-                    <field name="name" string="Number" readonly="1" decoration-bf="1"/>
-                    <field name="create_date" string="Creation Date" widget="date" optional="show"/>
-                    <field name="commitment_date" widget="date" optional="hide"/>
-                    <field name="expected_date" widget="date" optional="hide"/>
-                    <field name="partner_id" readonly="1"/>
-                    <field name="user_id" widget="many2one_avatar_user" optional="show"/>
-                    <field name="activity_ids" widget="list_activity" optional="show"/>
-                    <field name="team_id" optional="hide"/>
-                    <field name="tag_ids" optional="hide" widget="many2many_tags" options="{'color_field': 'color'}"/>
-                    <field name="company_id" groups="base.group_multi_company" optional="show" readonly="1"/>
-                    <field name="amount_untaxed" sum="Total Tax Excluded" widget="monetary" optional="hide"/>
-                    <field name="amount_tax" sum="Tax Total" widget="monetary" optional="hide"/>
-                    <field name="amount_total" sum="Total Tax Included" widget="monetary" decoration-bf="1" optional="show"/>
-                    <field name="state" decoration-success="state == 'sale' or state == 'done'" decoration-info="state == 'draft' or state == 'sent'" widget="badge" optional="show"/>
+                <tree>
                     <field name="invoice_status" optional="hide"/>
-                    <field name="message_needaction"/>
-                    <field name="currency_id"/>
-                    
+                    <field name="message_needaction" invisible="0"/>
+                    <field name="name"/>
                 </tree>
             </field>
         </record>
